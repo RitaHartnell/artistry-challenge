@@ -1,0 +1,9 @@
+<h1>Associate an Artist with an Intrument</h1>
+
+
+<%=form_for @playable do |f|%>
+    <%= f.collection_select :artist_id, @artists, :id, :name, prompt: true %>
+    <%= f.collection_select :instrument_id, @instruments, :id, :name, prompt: true %>
+    <br>
+    <%= f.submit%>
+<%end%>
